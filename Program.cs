@@ -7,7 +7,39 @@ namespace CarForHireConsoleApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World! hello from cork, cork is the real capital,testing testing");
+            String connectionString = "";
+
+            
+        }
+
+        private static void MenuBoard()
+        {
+            Console.WriteLine("");
+        }
+
+        private static void InsertRecord()
+        {
+
+        }
+
+        private static void DeleteRecord()
+        {
+
+        }
+
+        private static void UpdateRecord() 
+        { 
+            
+        }
+
+        private static void SearchRecord()
+        {
+
+        }
+
+        private static int ValidateInput()
+        {
+            return 0;
         }
     }
 }

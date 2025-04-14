@@ -11,8 +11,8 @@ namespace CarForHireConsoleApp
             bool isExit = true;
             MainLoop(ref isExit);
             Console.WriteLine("Hi");
-            Console.WriteLine("Hi");
-
+            Console.WriteLine("This is a new string: 16:48");
+            Console.WriteLine("This is a new string: 17:08");
         }
 
         private static void MainLoop(ref bool isExit)

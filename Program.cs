@@ -15,7 +15,9 @@ namespace CarForHireConsoleApp
             Console.WriteLine("This is a new string: 17:08");
             Console.WriteLine("hiii");
             Console.WriteLine("");
-            
+            Console.WriteLine("good evening");
+            Console.WriteLine("Good night");
+            Console.WriteLine("Good night");
         }
 
         private static void MainLoop(ref bool isExit)

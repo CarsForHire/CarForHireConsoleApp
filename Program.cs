@@ -11,7 +11,8 @@ namespace CarForHireConsoleApp
             bool isExit = true;
             MainLoop(ref isExit);
             Console.WriteLine("Hi");
-            
+            Console.WriteLine("Hi");
+
         }
 
         private static void MainLoop(ref bool isExit)

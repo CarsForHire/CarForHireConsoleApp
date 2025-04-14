@@ -20,6 +20,7 @@ namespace CarForHireConsoleApp
             Console.WriteLine("Good night");
             Console.WriteLine("Good Morning");
             Console.WriteLine("Good Morning");
+            Console.WriteLine("Im up way too late writing this.");
         }
 
         private static void MainLoop(ref bool isExit)

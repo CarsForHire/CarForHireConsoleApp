@@ -10,7 +10,7 @@ namespace CarForHireConsoleApp
             string connectionString = "";
             bool isExit = true;
             MainLoop(ref isExit);
-            Console.WriteLine("Cork is the best");
+            
         }
 
         private static void MainLoop(ref bool isExit)

@@ -14,6 +14,7 @@ namespace CarForHireConsoleApp
             Console.WriteLine("This is a new string: 16:48");
             Console.WriteLine("This is a new string: 17:08");
             Console.WriteLine("hiii");
+            Console.WriteLine("");
             
         }
 

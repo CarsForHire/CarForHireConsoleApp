@@ -10,6 +10,7 @@ namespace CarForHireConsoleApp
             string connectionString = "";
             bool isExit = true;
             MainLoop(ref isExit);
+            Console.WriteLine("Hi");
             
         }
 

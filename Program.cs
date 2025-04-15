@@ -22,7 +22,7 @@ namespace CarForHireConsoleApp
             Console.WriteLine("Good Morning");
             Console.WriteLine("Im up way too late writing this.");
         }
-
+        // main loop
         private static void MainLoop(ref bool isExit)
         {
             MenuBoard();

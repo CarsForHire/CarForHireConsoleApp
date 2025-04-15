@@ -10,8 +10,8 @@ namespace CarForHireConsoleApp
         {
             string connectionString = "";
             bool isExit = true;
-            MainLoop(ref isExit,ref connectionString);
-           
+            MainLoop(ref isExit, ref connectionString);
+            
         }
         // main loop
         private static void MainLoop(ref bool isExit,ref string connectionString)

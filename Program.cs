@@ -101,6 +101,7 @@ namespace CarForHireConsoleApp
             Console.WriteLine("Search record");
         }
 
+        //Checks for bad input
         private static int ValidateInput()
         {
             while (true)

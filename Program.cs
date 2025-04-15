@@ -25,6 +25,7 @@ namespace CarForHireConsoleApp
 
         private static void MainLoop(ref bool isExit)
         {
+            // This code get the choice of the user ....by Matthew 15/4/2025
             MenuBoard();
             while (isExit)
             {

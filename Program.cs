@@ -81,6 +81,7 @@ namespace CarForHireConsoleApp
             return choice;
         }
 
+        //Todo Kevin
         private static void InsertRecord()
         {
             Console.WriteLine("Insert method");
@@ -95,7 +96,7 @@ namespace CarForHireConsoleApp
         {
             Console.WriteLine("Update record");
         }
-
+        //Todo Kevin
         private static void SearchRecord()
         {
             Console.WriteLine("Search record");

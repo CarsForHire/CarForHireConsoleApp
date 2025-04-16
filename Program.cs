@@ -58,7 +58,7 @@ namespace CarForHireConsoleApp
                 case 3: UpdateRecord(ref connectionString);
                     break;
 
-                case 4: SearchRecord(ref connectionString);
+                case 4: DisplayAllRecords(ref connectionString);
                     break;
 
                 case 5: Console.WriteLine("Exiting.........");
@@ -87,9 +87,9 @@ namespace CarForHireConsoleApp
             Console.WriteLine("Update record");
         }
         //Todo Kevin
-        private static void SearchRecord(ref string connectionString)
+        private static void DisplayAllRecords(ref string connectionString)
         {
-            Console.WriteLine("Search record");
+            Console.WriteLine("Display All Records");
         }
 
         //Checks for bad input

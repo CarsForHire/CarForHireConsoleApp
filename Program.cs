@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Security.Cryptography.X509Certificates;
 using Microsoft.Data.SqlClient;
 namespace CarForHireConsoleApp
     
@@ -9,27 +10,17 @@ namespace CarForHireConsoleApp
         {
             string connectionString = "";
             bool isExit = true;
-            MainLoop(ref isExit);
-            Console.WriteLine("Hi");
-            Console.WriteLine("This is a new string: 16:48");
-            Console.WriteLine("This is a new string: 17:08");
-            Console.WriteLine("hiii");
-            Console.WriteLine("");
-            Console.WriteLine("good evening");
-            Console.WriteLine("Good night");
-            Console.WriteLine("Good night");
-            Console.WriteLine("Good Morning");
-            Console.WriteLine("Good Morning");
-            Console.WriteLine("Im up way too late writing this.");
+            MainLoop(ref isExit, ref connectionString);
+            
         }
-
-        private static void MainLoop(ref bool isExit)
+        // main loop
+        private static void MainLoop(ref bool isExit,ref string connectionString)
         {
             // This code get the choice of the user ....by Matthew 15/4/2025
             MenuBoard();
             while (isExit)
             {
-              GetUserChoice(ref isExit);
+              GetUserChoice(ref isExit,ref connectionString);
             }
         }
 
@@ -45,29 +36,29 @@ namespace CarForHireConsoleApp
             Console.WriteLine("*********************");
         }
 
-        private static int GetUserChoice(ref bool isExit)
+        private static int GetUserChoice(ref bool isExit,ref string connectionString)
         {
             Console.WriteLine("Enter choice: ");
             int choice = ValidateInput();
-            ProcessMenuSelection(ref choice,ref isExit);
+            ProcessMenuSelection(ref choice,ref isExit,ref connectionString);
             return choice;
 
         }
 
-        private static int ProcessMenuSelection(ref int  choice,ref bool isExit)
+        private static int ProcessMenuSelection(ref int  choice,ref bool isExit,ref string connectionString)
         {
             switch (choice)
             {
-                case 1: InsertRecord();
+                case 1: InsertRecord(ref connectionString);
                     break;
 
-                case 2: DeleteRecord();
+                case 2: DeleteRecord(ref connectionString);
                     break;
 
-                case 3: UpdateRecord();
+                case 3: UpdateRecord(ref connectionString);
                     break;
 
-                case 4: SearchRecord();
+                case 4: DisplayAllRecords(ref connectionString);
                     break;
 
                 case 5: Console.WriteLine("Exiting.........");
@@ -80,26 +71,28 @@ namespace CarForHireConsoleApp
             return choice;
         }
 
-        private static void InsertRecord()
+        //Todo Kevin
+        private static void InsertRecord(ref string connectionString)
         {
             Console.WriteLine("Insert method");
         }
-
-        private static void DeleteRecord()
+        //Todo Matthew 
+        private static void DeleteRecord(ref string connectionString)
         {
             Console.WriteLine("Delete method");
         }
-
-        private static void UpdateRecord() 
+        //Todo Matthew
+        private static void UpdateRecord(ref string connectionString) 
         {
             Console.WriteLine("Update record");
         }
-
-        private static void SearchRecord()
+        //Todo Kevin
+        private static void DisplayAllRecords(ref string connectionString)
         {
-            Console.WriteLine("Search record");
+            Console.WriteLine("Display All Records");
         }
 
+        //Checks for bad input
         private static int ValidateInput()
         {
             while (true)

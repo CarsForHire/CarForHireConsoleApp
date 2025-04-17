@@ -8,7 +8,7 @@ namespace CarForHireConsoleApp
     {
         static void Main(string[] args)
         {
-            string connectionString = "";
+            string connectionString = "Server=localhost\\SQLEXPRESS;Database=EVMotors_DB;Trusted_Connection=True;TrustServerCertificate=True;";
             bool isExit = true;
             MainLoop(ref isExit, ref connectionString);
             
@@ -92,14 +92,14 @@ namespace CarForHireConsoleApp
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
-                string query = "";
+                string query = "SELECT * FROM EVMotors";
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 using (SqlDataReader reader = cmd.ExecuteReader())
                 {
                     Console.WriteLine("\nCar List");
                     while (reader.Read())
                     {
-
+                        Console.WriteLine($"Vehicle Reg: {reader["VehicleRegNo"]}, VehicleMake: {reader["VehicleMake"]}, VehicleEngineSize: {reader["VehicleEngineSize"]}, Date Registered: {reader["DateRegistered"]}, Rent Per Day: {reader["RentPerDay"]}, Availibility: { reader["Available"]}");
                     }
 
                 }

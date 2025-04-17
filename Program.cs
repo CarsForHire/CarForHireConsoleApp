@@ -89,7 +89,21 @@ namespace CarForHireConsoleApp
         //Todo Kevin
         private static void DisplayAllRecords(ref string connectionString)
         {
-            Console.WriteLine("Display All Records");
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    Console.WriteLine("\nCar List");
+                    while (reader.Read())
+                    {
+
+                    }
+
+                }
+            }
         }
 
         //Checks for bad input

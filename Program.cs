@@ -99,7 +99,9 @@ namespace CarForHireConsoleApp
                     Console.WriteLine("\nCar List");
                     while (reader.Read())
                     {
-                        Console.WriteLine($"Vehicle Reg: {reader["VehicleRegNo"]}, VehicleMake: {reader["VehicleMake"]}, VehicleEngineSize: {reader["VehicleEngineSize"]}, Date Registered: {reader["DateRegistered"]}, Rent Per Day: {reader["RentPerDay"]}, Availibility: { reader["Available"]}");
+                        DateTime dateReg = Convert.ToDateTime(reader["DateRegistered"]);
+                        string formattedDate = dateReg.ToString("dd/MM/yyyy");
+                        Console.WriteLine($"Vehicle Reg: {reader["VehicleRegNo"]}, VehicleMake: {reader["VehicleMake"]}, VehicleEngineSize: {reader["VehicleEngineSize"]}, Date Registered: {formattedDate}, Rent Per Day: {reader["RentPerDay"]}, Availibility: { reader["Available"]}");
                     }
 
                 }

@@ -8,8 +8,8 @@
 CREATE DATABASE EVMotors_DB;
 GO
 
-USE EVMotors_DB;
-GO
+--USE EVMotors_DB;
+--GO
 
 CREATE TABLE EVMotors 
 (VehicleRegNo VARCHAR(10) PRIMARY KEY, 
@@ -21,5 +21,7 @@ Available VARCHAR(3) NOT NULL);
 
 
 
-INSERT INTO EVMotors(VehicleRegNo,VehicleMake,VehicleEngineSize,DateRegistered,RentPerDay,Available)
-VALUES ('171D12345', 'Toyota', '1.6L', '2023-10-01', 49.99, 'Yes');
+--INSERT INTO EVMotors(VehicleRegNo,VehicleMake,VehicleEngineSize,DateRegistered,RentPerDay,Available)
+--VALUES ('171D12345', 'Toyota', '1.6L', '2023-10-01', 49.99, 'Yes');
+
+SELECT * FROM EVmotors;

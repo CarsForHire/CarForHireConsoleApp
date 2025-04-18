@@ -74,7 +74,30 @@ namespace CarForHireConsoleApp
         //Todo Kevin
         private static void InsertRecord(ref string connectionString)
         {
-            Console.WriteLine("Insert method");
+            Console.WriteLine("Please enter Vehicle Reg: ");
+            string? vehicleReg = Console.ReadLine();
+
+            Console.WriteLine("Enter Vehicle Make: ");
+            string? vehicleMake = Console.ReadLine();
+
+            Console.WriteLine("Enter Engine Size: ");
+            string? engineSize = Console.ReadLine();
+
+            Console.WriteLine("Enter Registration Date: ");
+            DateOnly dateRegistered = DateOnly.Parse(Console.ReadLine());
+
+            Console.WriteLine("Rental Price: ");
+            double rentalPrice = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Availability: (Yes/No)");
+            string? available = Console.ReadLine();
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+
+            }
+
+
         }
         //Todo Matthew 
         private static void DeleteRecord(ref string connectionString)

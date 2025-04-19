@@ -94,10 +94,23 @@ namespace CarForHireConsoleApp
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
+                conn.Open();
+                string query = "INSERT INTO EvMotors (VehicleRegNo,VehicleMake,VehicleEngineSize,DateRegistered,RentPerDay,Available) VALUES (@VehicleRegNo,@VehicleMake,@VehicleEngineSize,@DateRegistered,@RentPerDay,@Available)";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@VehicleRegNo", vehicleReg);
+                    cmd.Parameters.AddWithValue("@VehicleMake",vehicleMake);
+                    cmd.Parameters.AddWithValue("@VehicleEngineSize",engineSize);
+                    cmd.Parameters.AddWithValue("@DateRegistered",dateRegistered);
+                    cmd.Parameters.AddWithValue("@RentPerDay",rentalPrice);
+                    cmd.Parameters.AddWithValue("@Available", available);
+                    cmd.ExecuteNonQuery();
+                    Console.WriteLine("Entry successfully added to database.");
 
+                }
+                   
+                    
             }
-
-
         }
         //Todo Matthew 
         private static void DeleteRecord(ref string connectionString)
